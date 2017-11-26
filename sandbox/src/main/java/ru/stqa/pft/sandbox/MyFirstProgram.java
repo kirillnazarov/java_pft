@@ -14,11 +14,11 @@ public class MyFirstProgram {
 
     Point p1 = new Point(10, 15);
     Point p2 = new Point(20, 25);
-    double resultDistance = Point.distance(p1, p2);
+    //double resultDistance = Point.distance(p1, p2);
     System.out.println("Расстояние между двумя точками, cо следующими координатами: ");
     System.out.println("по оси Х = " + p1.x + " и " + p1.y);
     System.out.println("по оси Y = " + p2.x + " и " + p2.y);
-    System.out.println("равно = " + resultDistance);
+    System.out.println("равно = " + Point.distance(p1, p2));
   }
 
   public static void hello(String somebody) {
