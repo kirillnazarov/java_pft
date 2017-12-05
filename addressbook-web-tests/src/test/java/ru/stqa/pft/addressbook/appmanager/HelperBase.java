@@ -28,4 +28,7 @@ public class HelperBase {
       return false;
     }
   }
+
+  //добавить метод выбора дропдауна
+
 }

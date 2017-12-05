@@ -1,5 +1,8 @@
 package ru.stqa.pft.addressbook.model;
 
+//разбить переменные на подгруппы name, phone, email etc.
+//добавить переменную под выбор даты рождения
+
 public class ContactData {
 
   private final String firstname;
