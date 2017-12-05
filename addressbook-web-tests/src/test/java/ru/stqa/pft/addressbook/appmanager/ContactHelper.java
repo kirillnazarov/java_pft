@@ -1,7 +1,11 @@
 package ru.stqa.pft.addressbook.appmanager;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.stqa.pft.addressbook.model.ContactData;
 
 public class ContactHelper extends HelperBase {
@@ -40,17 +44,30 @@ public class ContactHelper extends HelperBase {
   }
 
   public void selectContact() {
-    click(By.linkText("selected[]"));
+    click(By.name("selected[]"));
   }
 
   public void initContactModification() {
-    wd.findElement(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img")).click();
+    click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img"));
 
-    //переделать через HelperBase
+    //попробовать переделать через другой локатор
   }
 
   public void submitContactModification() {
     click(By.name("update"));
+  }
+
+  public void deletedSelectedContacts() {
+    click(By.xpath("//div[@id='content']/form[2]/div[2]/input"));
+
+    //попробовать переделать через другой локатор
+  }
+
+  public void acceptBrowserAlert() {
+    wd.switchTo().alert().accept();
+
+      //public void acceptDeletion(){
+    //wd.findElement(By.xpath("//body")).sendKeys(Keys.ENTER);
   }
 
 //добавить методы выбора даты рождения из дропдауна
